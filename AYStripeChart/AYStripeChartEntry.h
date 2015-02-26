@@ -11,9 +11,11 @@
 @interface AYStripeChartEntry : UIView
 
 @property (nonatomic, assign, readonly) CGFloat value;
-@property (nonatomic, retain, readonly) UIColor *color;
+@property (nonatomic, strong, readonly) UIColor *color;
+@property (nonatomic, strong, readonly) UIView *detailsView;
 
 + (instancetype)entryWithValue:(CGFloat)value
-                         color:(UIColor *)color;
+                         color:(UIColor *)color
+                   detailsView:(UIView *)detailsView;
 
 @end

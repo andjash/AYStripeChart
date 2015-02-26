@@ -15,6 +15,7 @@
 		CCAD881D1A9EFD2A001A6870 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCAD881B1A9EFD2A001A6870 /* LaunchScreen.xib */; };
 		CCAD88351A9EFDBA001A6870 /* AYStripeChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD88341A9EFDBA001A6870 /* AYStripeChartView.m */; };
 		CCAD88381A9EFFB9001A6870 /* AYStripeChartEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD88371A9EFFB9001A6870 /* AYStripeChartEntry.m */; };
+		CCAD883B1A9F12A6001A6870 /* ChartImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAD883A1A9F12A6001A6870 /* ChartImages.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CCAD88341A9EFDBA001A6870 /* AYStripeChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYStripeChartView.m; sourceTree = "<group>"; };
 		CCAD88361A9EFFB9001A6870 /* AYStripeChartEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYStripeChartEntry.h; sourceTree = "<group>"; };
 		CCAD88371A9EFFB9001A6870 /* AYStripeChartEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYStripeChartEntry.m; sourceTree = "<group>"; };
+		CCAD883A1A9F12A6001A6870 /* ChartImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ChartImages.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 		CCAD880B1A9EFD2A001A6870 /* AYStripeChartDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CCAD88391A9F1293001A6870 /* Assets */,
 				CCAD88101A9EFD2A001A6870 /* AppDelegate.h */,
 				CCAD88111A9EFD2A001A6870 /* AppDelegate.m */,
 				CCAD88131A9EFD2A001A6870 /* ViewController.h */,
@@ -96,6 +99,14 @@
 			);
 			name = AYStripeChart;
 			path = ../AYStripeChart;
+			sourceTree = "<group>";
+		};
+		CCAD88391A9F1293001A6870 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CCAD883A1A9F12A6001A6870 /* ChartImages.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCAD883B1A9F12A6001A6870 /* ChartImages.xcassets in Resources */,
 				CCAD88181A9EFD2A001A6870 /* Main.storyboard in Resources */,
 				CCAD881D1A9EFD2A001A6870 /* LaunchScreen.xib in Resources */,
 				CCAD881A1A9EFD2A001A6870 /* Images.xcassets in Resources */,

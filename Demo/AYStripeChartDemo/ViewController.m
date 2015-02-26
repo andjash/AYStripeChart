@@ -23,13 +23,16 @@
     
     self.stripeChart.minEntryWidth = 20.f;
     
-    AYStripeChartEntry *beer = [AYStripeChartEntry entryWithValue:0.5 color:[UIColor brownColor]];
-    AYStripeChartEntry *pizza = [AYStripeChartEntry entryWithValue:0.2 color:[UIColor redColor]];
-    AYStripeChartEntry *fry = [AYStripeChartEntry entryWithValue:0.7 color:[UIColor orangeColor]];
-    AYStripeChartEntry *one = [AYStripeChartEntry entryWithValue:0.01 color:[UIColor greenColor]];
-    AYStripeChartEntry *two = [AYStripeChartEntry entryWithValue:0.05 color:[UIColor blueColor]];
     
-    self.stripeChart.stripeChartEntries = @[beer, pizza, fry, one, two];
+    UIImageView *beerView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BeerEntry"]];
+    UIImageView *pizzaView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"PizzaEntry"]];
+    UIImageView *fryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FryEntry"]];
+    
+    AYStripeChartEntry *beer = [AYStripeChartEntry entryWithValue:0.5 color:[UIColor brownColor] detailsView:beerView];
+    AYStripeChartEntry *pizza = [AYStripeChartEntry entryWithValue:0.05 color:[UIColor redColor] detailsView:pizzaView];
+    AYStripeChartEntry *fry = [AYStripeChartEntry entryWithValue:0.7 color:[UIColor orangeColor] detailsView:fryView];
+    
+    self.stripeChart.stripeChartEntries = @[beer, pizza, fry];
 }
 
 @end

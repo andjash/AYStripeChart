@@ -56,6 +56,14 @@
         AYStripeChartEntry *entry = self.innerChartValues[i];
         UIView *stripeView = self.stripesViews[i];
         CGFloat entryWidth = (entry.value / summ) * self.frame.size.width;
+        UIView *detailsView = [self.innerChartValues[i] detailsView];
+        if (detailsView.frame.size.width > entryWidth) {
+            detailsView.alpha = 0;
+        } else {
+            detailsView.alpha = 1;
+        }
+
+        
         CGFloat viewHeight = 0;
         if (self.selectedStripe) {
             if (self.selectedStripe == stripeView) {
@@ -85,7 +93,7 @@
     for (AYStripeChartEntry *entry in self.innerChartValues) {
         UIView *stripeView = [UIView new];
         [stripeView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(stripeViewTaped:)]];
-        
+        [stripeView addSubview:entry.detailsView];
         stripeView.backgroundColor = entry.color;
         [self addSubview:stripeView];
         [views addObject:stripeView];
@@ -109,7 +117,8 @@
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:[self.stripeChartEntries count]];
     for (NSInteger i = 0 ; i < [self.stripeChartEntries count]; i++) {
         AYStripeChartEntry *newEntry = [AYStripeChartEntry entryWithValue:[balancedValues[i] floatValue]
-                                                                    color:[self.stripeChartEntries[i] color]];
+                                                                    color:[self.stripeChartEntries[i] color]
+                                                              detailsView:[self.stripeChartEntries[i] detailsView]];
         [result addObject:newEntry];
     }
     self.innerChartValues = result;
