@@ -14,17 +14,8 @@
 		CCAD881A1A9EFD2A001A6870 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAD88191A9EFD2A001A6870 /* Images.xcassets */; };
 		CCAD881D1A9EFD2A001A6870 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCAD881B1A9EFD2A001A6870 /* LaunchScreen.xib */; };
 		CCAD88351A9EFDBA001A6870 /* AYStripeChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD88341A9EFDBA001A6870 /* AYStripeChartView.m */; };
+		CCAD88381A9EFFB9001A6870 /* AYStripeChartEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD88371A9EFFB9001A6870 /* AYStripeChartEntry.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CCAD88231A9EFD2A001A6870 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CCAD88011A9EFD2A001A6870 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CCAD88081A9EFD2A001A6870;
-			remoteInfo = AYStripeChartDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CCAD88091A9EFD2A001A6870 /* AYStripeChartDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AYStripeChartDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,20 +28,14 @@
 		CCAD88171A9EFD2A001A6870 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCAD88191A9EFD2A001A6870 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CCAD881C1A9EFD2A001A6870 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		CCAD88221A9EFD2A001A6870 /* AYStripeChartDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AYStripeChartDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCAD88331A9EFDBA001A6870 /* AYStripeChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYStripeChartView.h; sourceTree = "<group>"; };
 		CCAD88341A9EFDBA001A6870 /* AYStripeChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYStripeChartView.m; sourceTree = "<group>"; };
+		CCAD88361A9EFFB9001A6870 /* AYStripeChartEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYStripeChartEntry.h; sourceTree = "<group>"; };
+		CCAD88371A9EFFB9001A6870 /* AYStripeChartEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYStripeChartEntry.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CCAD88061A9EFD2A001A6870 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CCAD881F1A9EFD2A001A6870 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -73,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				CCAD88091A9EFD2A001A6870 /* AYStripeChartDemo.app */,
-				CCAD88221A9EFD2A001A6870 /* AYStripeChartDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +91,8 @@
 			children = (
 				CCAD88331A9EFDBA001A6870 /* AYStripeChartView.h */,
 				CCAD88341A9EFDBA001A6870 /* AYStripeChartView.m */,
+				CCAD88361A9EFFB9001A6870 /* AYStripeChartEntry.h */,
+				CCAD88371A9EFFB9001A6870 /* AYStripeChartEntry.m */,
 			);
 			name = AYStripeChart;
 			path = ../AYStripeChart;
@@ -132,24 +118,6 @@
 			productReference = CCAD88091A9EFD2A001A6870 /* AYStripeChartDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CCAD88211A9EFD2A001A6870 /* AYStripeChartDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CCAD882F1A9EFD2A001A6870 /* Build configuration list for PBXNativeTarget "AYStripeChartDemoTests" */;
-			buildPhases = (
-				CCAD881E1A9EFD2A001A6870 /* Sources */,
-				CCAD881F1A9EFD2A001A6870 /* Frameworks */,
-				CCAD88201A9EFD2A001A6870 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CCAD88241A9EFD2A001A6870 /* PBXTargetDependency */,
-			);
-			name = AYStripeChartDemoTests;
-			productName = AYStripeChartDemoTests;
-			productReference = CCAD88221A9EFD2A001A6870 /* AYStripeChartDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -161,10 +129,6 @@
 				TargetAttributes = {
 					CCAD88081A9EFD2A001A6870 = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					CCAD88211A9EFD2A001A6870 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = CCAD88081A9EFD2A001A6870;
 					};
 				};
 			};
@@ -182,7 +146,6 @@
 			projectRoot = "";
 			targets = (
 				CCAD88081A9EFD2A001A6870 /* AYStripeChartDemo */,
-				CCAD88211A9EFD2A001A6870 /* AYStripeChartDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -198,13 +161,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CCAD88201A9EFD2A001A6870 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -216,25 +172,11 @@
 				CCAD88151A9EFD2A001A6870 /* ViewController.m in Sources */,
 				CCAD88121A9EFD2A001A6870 /* AppDelegate.m in Sources */,
 				CCAD880F1A9EFD2A001A6870 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CCAD881E1A9EFD2A001A6870 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				CCAD88381A9EFFB9001A6870 /* AYStripeChartEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CCAD88241A9EFD2A001A6870 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CCAD88081A9EFD2A001A6870 /* AYStripeChartDemo */;
-			targetProxy = CCAD88231A9EFD2A001A6870 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CCAD88161A9EFD2A001A6870 /* Main.storyboard */ = {
@@ -290,7 +232,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -325,7 +267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -352,40 +294,6 @@
 			};
 			name = Release;
 		};
-		CCAD88301A9EFD2A001A6870 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = AYStripeChartDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AYStripeChartDemo.app/AYStripeChartDemo";
-			};
-			name = Debug;
-		};
-		CCAD88311A9EFD2A001A6870 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = AYStripeChartDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AYStripeChartDemo.app/AYStripeChartDemo";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -403,15 +311,6 @@
 			buildConfigurations = (
 				CCAD882D1A9EFD2A001A6870 /* Debug */,
 				CCAD882E1A9EFD2A001A6870 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CCAD882F1A9EFD2A001A6870 /* Build configuration list for PBXNativeTarget "AYStripeChartDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CCAD88301A9EFD2A001A6870 /* Debug */,
-				CCAD88311A9EFD2A001A6870 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

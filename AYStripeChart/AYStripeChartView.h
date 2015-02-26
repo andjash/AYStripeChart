@@ -10,4 +10,8 @@
 
 @interface AYStripeChartView : UIView
 
+@property (nonatomic, strong) NSArray *stripeChartEntries;
+
+@property (nonatomic, assign) CGFloat minEntryWidth;
+
 @end
