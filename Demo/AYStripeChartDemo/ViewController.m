@@ -80,9 +80,6 @@
 
 - (IBAction)sliderValueChanged:(id)sender {
     [self recreateWithPizzaValue:self.pizzaSlider.value beerValue:self.beerSlider.value fryValue:self.frySlider.value];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.stripeChart.selectedEntry = self.stripeChart.stripeChartEntries[2];
-    });
 }
 
 @end
