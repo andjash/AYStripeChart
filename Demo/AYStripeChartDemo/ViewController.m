@@ -9,44 +9,80 @@
 #import "ViewController.h"
 #import "AYStripeChartView.h"
 #import "AYStripeChartEntry.h"
+#import "StripeDetailView.h"
 
 @interface ViewController ()<AYStripeChartViewDelegate>
 
 @property (nonatomic, weak) IBOutlet AYStripeChartView *stripeChart;
+
+@property (nonatomic, weak) IBOutlet UISlider *beerSlider;
+@property (nonatomic, weak) IBOutlet UISlider *pizzaSlider;
+@property (nonatomic, weak) IBOutlet UISlider *frySlider;
 
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
+    [super viewDidLoad];    
     self.stripeChart.minEntryWidth = 20.f;
-    
-    
-    UIImageView *beerView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BeerEntry"]];
-    UIImageView *pizzaView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"PizzaEntry"]];
-    UIImageView *fryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FryEntry"]];
-    
-    AYStripeChartEntry *beer = [AYStripeChartEntry entryWithValue:0.5 color:[UIColor brownColor] detailsView:beerView];
-    AYStripeChartEntry *pizza = [AYStripeChartEntry entryWithValue:0.05 color:[UIColor redColor] detailsView:pizzaView];
-    AYStripeChartEntry *fry = [AYStripeChartEntry entryWithValue:0.7 color:[UIColor orangeColor] detailsView:fryView];
-    
     self.stripeChart.delegate = self;
+    [self recreateWithPizzaValue:self.pizzaSlider.value beerValue:self.beerSlider.value fryValue:self.frySlider.value];
+}
+
+#pragma mark - Private
+
+- (void)recreateWithPizzaValue:(CGFloat)pizzaValue
+                     beerValue:(CGFloat)beerValue
+                      fryValue:(CGFloat)fryValue {
+    StripeDetailView *beerDetails = [StripeDetailView detailsViewFromNib];
+    beerDetails.icon.image = [UIImage imageNamed:@"BeerEntry"];
+    beerDetails.detailLabel.text = @"0.5";
+    beerDetails.detailLabel.alpha = 0;
+    
+    StripeDetailView *pizzaDetails = [StripeDetailView detailsViewFromNib];
+    pizzaDetails.icon.image = [UIImage imageNamed:@"PizzaEntry"];
+    pizzaDetails.detailLabel.text = @"0.05";
+    pizzaDetails.detailLabel.alpha = 0;
+    
+    StripeDetailView *fryDetails = [StripeDetailView detailsViewFromNib];
+    fryDetails.icon.image = [UIImage imageNamed:@"FryEntry"];
+    fryDetails.detailLabel.text = @"0.7";
+    fryDetails.detailLabel.alpha = 0;
+    
+    fryDetails.frame =
+    pizzaDetails.frame =
+    beerDetails.frame = CGRectMake(0, 0, 50, 60);
+    
+    AYStripeChartEntry *beer = [AYStripeChartEntry entryWithValue:beerValue color:[UIColor brownColor] detailsView:beerDetails];
+    AYStripeChartEntry *pizza = [AYStripeChartEntry entryWithValue:pizzaValue color:[UIColor redColor] detailsView:pizzaDetails];
+    AYStripeChartEntry *fry = [AYStripeChartEntry entryWithValue:fryValue color:[UIColor orangeColor] detailsView:fryDetails];
+
     self.stripeChart.stripeChartEntries = @[beer, pizza, fry];
 }
 
 #pragma mark - AYStripeChartViewDelegate
 
 - (BOOL)stripeChart:(AYStripeChartView *)chartView willSelectChartEntry:(AYStripeChartEntry *)entry {
-    NSLog(@"Will select %@", entry);
     return YES;
 }
 - (void)stripeChart:(AYStripeChartView *)chartView didSelectChartEntry:(AYStripeChartEntry *)entry {
-     NSLog(@"Did select %@", entry);
+    StripeDetailView *details = (StripeDetailView *)entry.detailsView;
+    details.detailLabel.alpha = 1;
 }
+
 - (void)stripeChart:(AYStripeChartView *)chartView didDeselectChartEntry:(AYStripeChartEntry *)entry {
-     NSLog(@"Did deselect %@", entry);
+    StripeDetailView *details = (StripeDetailView *)entry.detailsView;
+    details.detailLabel.alpha = 0;
+}
+
+#pragma mark - Action
+
+- (IBAction)sliderValueChanged:(id)sender {
+    [self recreateWithPizzaValue:self.pizzaSlider.value beerValue:self.beerSlider.value fryValue:self.frySlider.value];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.stripeChart.selectedEntry = self.stripeChart.stripeChartEntries[2];
+    });
 }
 
 @end

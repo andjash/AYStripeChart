@@ -16,6 +16,8 @@
 		CCAD88351A9EFDBA001A6870 /* AYStripeChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD88341A9EFDBA001A6870 /* AYStripeChartView.m */; };
 		CCAD88381A9EFFB9001A6870 /* AYStripeChartEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD88371A9EFFB9001A6870 /* AYStripeChartEntry.m */; };
 		CCAD883B1A9F12A6001A6870 /* ChartImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAD883A1A9F12A6001A6870 /* ChartImages.xcassets */; };
+		CCAD883E1A9F1BDA001A6870 /* StripeDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD883D1A9F1BDA001A6870 /* StripeDetailView.m */; };
+		CCAD88421A9F1C48001A6870 /* StripeDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCAD88411A9F1C48001A6870 /* StripeDetailView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +35,10 @@
 		CCAD88341A9EFDBA001A6870 /* AYStripeChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYStripeChartView.m; sourceTree = "<group>"; };
 		CCAD88361A9EFFB9001A6870 /* AYStripeChartEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYStripeChartEntry.h; sourceTree = "<group>"; };
 		CCAD88371A9EFFB9001A6870 /* AYStripeChartEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYStripeChartEntry.m; sourceTree = "<group>"; };
-		CCAD883A1A9F12A6001A6870 /* ChartImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ChartImages.xcassets; sourceTree = "<group>"; };
+		CCAD883A1A9F12A6001A6870 /* ChartImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = ChartImages.xcassets; path = Assets/ChartImages.xcassets; sourceTree = "<group>"; };
+		CCAD883C1A9F1BDA001A6870 /* StripeDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StripeDetailView.h; sourceTree = "<group>"; };
+		CCAD883D1A9F1BDA001A6870 /* StripeDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StripeDetailView.m; sourceTree = "<group>"; };
+		CCAD88411A9F1C48001A6870 /* StripeDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StripeDetailView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +72,15 @@
 		CCAD880B1A9EFD2A001A6870 /* AYStripeChartDemo */ = {
 			isa = PBXGroup;
 			children = (
-				CCAD88391A9F1293001A6870 /* Assets */,
+				CCAD883C1A9F1BDA001A6870 /* StripeDetailView.h */,
+				CCAD883D1A9F1BDA001A6870 /* StripeDetailView.m */,
+				CCAD88411A9F1C48001A6870 /* StripeDetailView.xib */,
 				CCAD88101A9EFD2A001A6870 /* AppDelegate.h */,
 				CCAD88111A9EFD2A001A6870 /* AppDelegate.m */,
 				CCAD88131A9EFD2A001A6870 /* ViewController.h */,
 				CCAD88141A9EFD2A001A6870 /* ViewController.m */,
 				CCAD88161A9EFD2A001A6870 /* Main.storyboard */,
+				CCAD883A1A9F12A6001A6870 /* ChartImages.xcassets */,
 				CCAD88191A9EFD2A001A6870 /* Images.xcassets */,
 				CCAD881B1A9EFD2A001A6870 /* LaunchScreen.xib */,
 				CCAD880C1A9EFD2A001A6870 /* Supporting Files */,
@@ -99,14 +107,6 @@
 			);
 			name = AYStripeChart;
 			path = ../AYStripeChart;
-			sourceTree = "<group>";
-		};
-		CCAD88391A9F1293001A6870 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				CCAD883A1A9F12A6001A6870 /* ChartImages.xcassets */,
-			);
-			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCAD883B1A9F12A6001A6870 /* ChartImages.xcassets in Resources */,
+				CCAD88421A9F1C48001A6870 /* StripeDetailView.xib in Resources */,
 				CCAD88181A9EFD2A001A6870 /* Main.storyboard in Resources */,
 				CCAD881D1A9EFD2A001A6870 /* LaunchScreen.xib in Resources */,
 				CCAD881A1A9EFD2A001A6870 /* Images.xcassets in Resources */,
@@ -184,6 +185,7 @@
 				CCAD88151A9EFD2A001A6870 /* ViewController.m in Sources */,
 				CCAD88121A9EFD2A001A6870 /* AppDelegate.m in Sources */,
 				CCAD880F1A9EFD2A001A6870 /* main.m in Sources */,
+				CCAD883E1A9F1BDA001A6870 /* StripeDetailView.m in Sources */,
 				CCAD88381A9EFFB9001A6870 /* AYStripeChartEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

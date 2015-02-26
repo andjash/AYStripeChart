@@ -24,12 +24,22 @@
 
 - (void)setStripeChartEntries:(NSArray *)stripeChartEntries {
     _stripeChartEntries = stripeChartEntries;
+    self.selectedStripe = nil;
+    self.selectedEntry = nil;
     [self recreateChartValues];
     [self recreateStripeViews];
     [self setNeedsLayout];
 }
 
 - (void)setSelectedEntry:(AYStripeChartEntry *)selectedEntry {
+    if (_selectedEntry == selectedEntry) {
+        selectedEntry = nil;
+        self.selectedStripe = nil;
+    } else if (selectedEntry) {
+        NSUInteger index = [self.stripeChartEntries indexOfObject:selectedEntry];
+        self.selectedStripe = self.stripesViews[index];
+    }
+        
     id oldEntry = _selectedEntry;
     _selectedEntry = selectedEntry;
     
@@ -96,6 +106,7 @@
     for (AYStripeChartEntry *entry in self.innerChartValues) {
         UIView *stripeView = [UIView new];
         [stripeView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(stripeViewTaped:)]];
+        entry.detailsView.autoresizingMask = UIViewAutoresizingNone;
         [stripeView addSubview:entry.detailsView];
         stripeView.backgroundColor = entry.color;
         [self addSubview:stripeView];
@@ -202,13 +213,7 @@
             if (self.delegate && ![self.delegate stripeChart:self willSelectChartEntry:self.stripeChartEntries[i]]) {
                 return;
             }
-            if (self.selectedStripe == selectedView) {
-                self.selectedStripe = nil;
-                self.selectedEntry = nil;
-            } else {
-                self.selectedStripe = selectedView;
-                self.selectedEntry = self.stripeChartEntries[i];
-            }
+            self.selectedEntry = self.stripeChartEntries[i];
             return;
         }
     }
