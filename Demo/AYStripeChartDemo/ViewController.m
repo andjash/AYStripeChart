@@ -10,7 +10,7 @@
 #import "AYStripeChartView.h"
 #import "AYStripeChartEntry.h"
 
-@interface ViewController ()
+@interface ViewController ()<AYStripeChartViewDelegate>
 
 @property (nonatomic, weak) IBOutlet AYStripeChartView *stripeChart;
 
@@ -32,7 +32,21 @@
     AYStripeChartEntry *pizza = [AYStripeChartEntry entryWithValue:0.05 color:[UIColor redColor] detailsView:pizzaView];
     AYStripeChartEntry *fry = [AYStripeChartEntry entryWithValue:0.7 color:[UIColor orangeColor] detailsView:fryView];
     
+    self.stripeChart.delegate = self;
     self.stripeChart.stripeChartEntries = @[beer, pizza, fry];
+}
+
+#pragma mark - AYStripeChartViewDelegate
+
+- (BOOL)stripeChart:(AYStripeChartView *)chartView willSelectChartEntry:(AYStripeChartEntry *)entry {
+    NSLog(@"Will select %@", entry);
+    return YES;
+}
+- (void)stripeChart:(AYStripeChartView *)chartView didSelectChartEntry:(AYStripeChartEntry *)entry {
+     NSLog(@"Did select %@", entry);
+}
+- (void)stripeChart:(AYStripeChartView *)chartView didDeselectChartEntry:(AYStripeChartEntry *)entry {
+     NSLog(@"Did deselect %@", entry);
 }
 
 @end

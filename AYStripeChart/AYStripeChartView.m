@@ -15,7 +15,6 @@
 @property (nonatomic, strong) NSArray *stripesViews;
 
 @property (nonatomic, strong) UIView *selectedStripe;
-@property (nonatomic, strong) AYStripeChartEntry *selectedEntry;
 
 @end
 
@@ -31,7 +30,11 @@
 }
 
 - (void)setSelectedEntry:(AYStripeChartEntry *)selectedEntry {
+    id oldEntry = _selectedEntry;
     _selectedEntry = selectedEntry;
+    
+    [self.delegate stripeChart:self didDeselectChartEntry:oldEntry];
+    [self.delegate stripeChart:self didSelectChartEntry:selectedEntry];
     
     [UIView animateWithDuration:0.3 animations:^{
         [self placeStripes];
@@ -196,6 +199,9 @@
     for (NSInteger i = 0; i < [self.stripesViews count]; i++) {
         UIView *stripeView = self.stripesViews[i];
         if (stripeView == selectedView) {
+            if (self.delegate && ![self.delegate stripeChart:self willSelectChartEntry:self.stripeChartEntries[i]]) {
+                return;
+            }
             if (self.selectedStripe == selectedView) {
                 self.selectedStripe = nil;
                 self.selectedEntry = nil;
