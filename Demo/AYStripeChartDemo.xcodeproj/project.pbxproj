@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CCAD880F1A9EFD2A001A6870 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD880E1A9EFD2A001A6870 /* main.m */; };
+		CCAD88121A9EFD2A001A6870 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD88111A9EFD2A001A6870 /* AppDelegate.m */; };
+		CCAD88151A9EFD2A001A6870 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD88141A9EFD2A001A6870 /* ViewController.m */; };
+		CCAD88181A9EFD2A001A6870 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCAD88161A9EFD2A001A6870 /* Main.storyboard */; };
+		CCAD881A1A9EFD2A001A6870 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCAD88191A9EFD2A001A6870 /* Images.xcassets */; };
+		CCAD881D1A9EFD2A001A6870 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCAD881B1A9EFD2A001A6870 /* LaunchScreen.xib */; };
+		CCAD88351A9EFDBA001A6870 /* AYStripeChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD88341A9EFDBA001A6870 /* AYStripeChartView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CCAD88231A9EFD2A001A6870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCAD88011A9EFD2A001A6870 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCAD88081A9EFD2A001A6870;
+			remoteInfo = AYStripeChartDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CCAD88091A9EFD2A001A6870 /* AYStripeChartDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AYStripeChartDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCAD880D1A9EFD2A001A6870 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCAD880E1A9EFD2A001A6870 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CCAD88101A9EFD2A001A6870 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CCAD88111A9EFD2A001A6870 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CCAD88131A9EFD2A001A6870 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CCAD88141A9EFD2A001A6870 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CCAD88171A9EFD2A001A6870 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CCAD88191A9EFD2A001A6870 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CCAD881C1A9EFD2A001A6870 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CCAD88221A9EFD2A001A6870 /* AYStripeChartDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AYStripeChartDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCAD88331A9EFDBA001A6870 /* AYStripeChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYStripeChartView.h; sourceTree = "<group>"; };
+		CCAD88341A9EFDBA001A6870 /* AYStripeChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYStripeChartView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCAD88061A9EFD2A001A6870 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCAD881F1A9EFD2A001A6870 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CCAD88001A9EFD2A001A6870 = {
+			isa = PBXGroup;
+			children = (
+				CCAD88321A9EFD87001A6870 /* AYStripeChart */,
+				CCAD880B1A9EFD2A001A6870 /* AYStripeChartDemo */,
+				CCAD880A1A9EFD2A001A6870 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCAD880A1A9EFD2A001A6870 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCAD88091A9EFD2A001A6870 /* AYStripeChartDemo.app */,
+				CCAD88221A9EFD2A001A6870 /* AYStripeChartDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCAD880B1A9EFD2A001A6870 /* AYStripeChartDemo */ = {
+			isa = PBXGroup;
+			children = (
+				CCAD88101A9EFD2A001A6870 /* AppDelegate.h */,
+				CCAD88111A9EFD2A001A6870 /* AppDelegate.m */,
+				CCAD88131A9EFD2A001A6870 /* ViewController.h */,
+				CCAD88141A9EFD2A001A6870 /* ViewController.m */,
+				CCAD88161A9EFD2A001A6870 /* Main.storyboard */,
+				CCAD88191A9EFD2A001A6870 /* Images.xcassets */,
+				CCAD881B1A9EFD2A001A6870 /* LaunchScreen.xib */,
+				CCAD880C1A9EFD2A001A6870 /* Supporting Files */,
+			);
+			path = AYStripeChartDemo;
+			sourceTree = "<group>";
+		};
+		CCAD880C1A9EFD2A001A6870 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCAD880D1A9EFD2A001A6870 /* Info.plist */,
+				CCAD880E1A9EFD2A001A6870 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CCAD88321A9EFD87001A6870 /* AYStripeChart */ = {
+			isa = PBXGroup;
+			children = (
+				CCAD88331A9EFDBA001A6870 /* AYStripeChartView.h */,
+				CCAD88341A9EFDBA001A6870 /* AYStripeChartView.m */,
+			);
+			name = AYStripeChart;
+			path = ../AYStripeChart;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCAD88081A9EFD2A001A6870 /* AYStripeChartDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCAD882C1A9EFD2A001A6870 /* Build configuration list for PBXNativeTarget "AYStripeChartDemo" */;
+			buildPhases = (
+				CCAD88051A9EFD2A001A6870 /* Sources */,
+				CCAD88061A9EFD2A001A6870 /* Frameworks */,
+				CCAD88071A9EFD2A001A6870 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AYStripeChartDemo;
+			productName = AYStripeChartDemo;
+			productReference = CCAD88091A9EFD2A001A6870 /* AYStripeChartDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CCAD88211A9EFD2A001A6870 /* AYStripeChartDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCAD882F1A9EFD2A001A6870 /* Build configuration list for PBXNativeTarget "AYStripeChartDemoTests" */;
+			buildPhases = (
+				CCAD881E1A9EFD2A001A6870 /* Sources */,
+				CCAD881F1A9EFD2A001A6870 /* Frameworks */,
+				CCAD88201A9EFD2A001A6870 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCAD88241A9EFD2A001A6870 /* PBXTargetDependency */,
+			);
+			name = AYStripeChartDemoTests;
+			productName = AYStripeChartDemoTests;
+			productReference = CCAD88221A9EFD2A001A6870 /* AYStripeChartDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCAD88011A9EFD2A001A6870 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Andrey Yashnev";
+				TargetAttributes = {
+					CCAD88081A9EFD2A001A6870 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					CCAD88211A9EFD2A001A6870 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = CCAD88081A9EFD2A001A6870;
+					};
+				};
+			};
+			buildConfigurationList = CCAD88041A9EFD2A001A6870 /* Build configuration list for PBXProject "AYStripeChartDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CCAD88001A9EFD2A001A6870;
+			productRefGroup = CCAD880A1A9EFD2A001A6870 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCAD88081A9EFD2A001A6870 /* AYStripeChartDemo */,
+				CCAD88211A9EFD2A001A6870 /* AYStripeChartDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCAD88071A9EFD2A001A6870 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCAD88181A9EFD2A001A6870 /* Main.storyboard in Resources */,
+				CCAD881D1A9EFD2A001A6870 /* LaunchScreen.xib in Resources */,
+				CCAD881A1A9EFD2A001A6870 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCAD88201A9EFD2A001A6870 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCAD88051A9EFD2A001A6870 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCAD88351A9EFDBA001A6870 /* AYStripeChartView.m in Sources */,
+				CCAD88151A9EFD2A001A6870 /* ViewController.m in Sources */,
+				CCAD88121A9EFD2A001A6870 /* AppDelegate.m in Sources */,
+				CCAD880F1A9EFD2A001A6870 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCAD881E1A9EFD2A001A6870 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CCAD88241A9EFD2A001A6870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCAD88081A9EFD2A001A6870 /* AYStripeChartDemo */;
+			targetProxy = CCAD88231A9EFD2A001A6870 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CCAD88161A9EFD2A001A6870 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCAD88171A9EFD2A001A6870 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CCAD881B1A9EFD2A001A6870 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCAD881C1A9EFD2A001A6870 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CCAD882A1A9EFD2A001A6870 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CCAD882B1A9EFD2A001A6870 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCAD882D1A9EFD2A001A6870 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AYStripeChartDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CCAD882E1A9EFD2A001A6870 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AYStripeChartDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CCAD88301A9EFD2A001A6870 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AYStripeChartDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AYStripeChartDemo.app/AYStripeChartDemo";
+			};
+			name = Debug;
+		};
+		CCAD88311A9EFD2A001A6870 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AYStripeChartDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AYStripeChartDemo.app/AYStripeChartDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCAD88041A9EFD2A001A6870 /* Build configuration list for PBXProject "AYStripeChartDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCAD882A1A9EFD2A001A6870 /* Debug */,
+				CCAD882B1A9EFD2A001A6870 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCAD882C1A9EFD2A001A6870 /* Build configuration list for PBXNativeTarget "AYStripeChartDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCAD882D1A9EFD2A001A6870 /* Debug */,
+				CCAD882E1A9EFD2A001A6870 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCAD882F1A9EFD2A001A6870 /* Build configuration list for PBXNativeTarget "AYStripeChartDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCAD88301A9EFD2A001A6870 /* Debug */,
+				CCAD88311A9EFD2A001A6870 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CCAD88011A9EFD2A001A6870 /* Project object */;
+}
