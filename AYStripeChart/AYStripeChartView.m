@@ -68,7 +68,7 @@
     for (NSInteger i = 0; i < [self.innerChartValues count]; i++) {
         AYStripeChartEntry *entry = self.innerChartValues[i];
         UIView *stripeView = self.stripesViews[i];
-        CGFloat entryWidth = (entry.value / summ) * self.frame.size.width;
+        CGFloat entryWidth = ceilf((entry.value / summ) * self.frame.size.width);
         UIView *detailsView = [self.innerChartValues[i] detailsView];
         if (detailsView.frame.size.width > entryWidth) {
             detailsView.alpha = 0;
@@ -126,6 +126,7 @@
         [initialValues addObject:@(entry.value)];
         summ += entry.value;
     }
+    
     CGFloat minValue = (self.minEntryWidth / self.frame.size.width) * summ;
     NSArray *balancedValues = [self balanceArray:initialValues withMinValue:minValue];
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:[self.stripeChartEntries count]];
@@ -163,7 +164,7 @@
         
         if (floatValue < minValue) {
             [neutralValues addObject:@[@(minValue), @(i)]];
-            balanceValue += minValue + floatValue;
+            balanceValue += minValue - floatValue;
             continue;
         }
         
@@ -195,10 +196,23 @@
     for (NSArray *value in target) {
         CGFloat floatValue = [value[0] floatValue];
         
-        CGFloat newValue = MAX(min, floatValue - ((floatValue / targetArraySumm) * balanceValue));
-        difRes += floatValue - newValue;
+        CGFloat calculated = floatValue - ((floatValue / targetArraySumm) * balanceValue);
+        CGFloat newValue = 0;
+        if (calculated < min) {
+            difRes += min - calculated;
+            newValue = min;
+        } else {
+            newValue = calculated;
+        }
         [result addObject:@[@(newValue), value[1]]];
     }
+    
+    if (difRes == balanceValue) {
+        return result;
+    } else if (difRes > 0) {
+        return [self decreaseValue:difRes fromArray:result minValue:min];
+    }
+    
     return result;
 }
 
