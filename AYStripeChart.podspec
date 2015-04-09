@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "AYStripeChart"
-  s.version          = "1.0.1"
+  s.version          = "1.1.1"
   s.summary          = "Simple and configurable stripe chart."
   s.license          = 'MIT'
   s.homepage         = 'https://github.com/andjash/AYStripeChart'

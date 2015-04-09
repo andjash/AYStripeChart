@@ -23,6 +23,7 @@
 
 @property (nonatomic, strong) NSArray *stripeChartEntries;
 @property (nonatomic, assign) CGFloat minEntryWidth;
+@property (nonatomic, assign) CGFloat selectedItemHeightIncrease;
 @property (nonatomic, strong) AYStripeChartEntry *selectedEntry;
 
 @property (nonatomic, assign) id<AYStripeChartViewDelegate> delegate;

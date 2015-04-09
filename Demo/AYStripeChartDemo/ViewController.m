@@ -26,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];    
     self.stripeChart.minEntryWidth = 20.f;
+    self.stripeChart.selectedItemHeightIncrease = 30;
     self.stripeChart.delegate = self;
     [self recreateWithPizzaValue:self.pizzaSlider.value beerValue:self.beerSlider.value fryValue:self.frySlider.value];
 }
