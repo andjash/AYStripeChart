@@ -39,12 +39,16 @@
         NSUInteger index = [self.stripeChartEntries indexOfObject:selectedEntry];
         self.selectedStripe = self.stripesViews[index];
     }
-        
+    
     id oldEntry = _selectedEntry;
     _selectedEntry = selectedEntry;
     
-    [self.delegate stripeChart:self didDeselectChartEntry:oldEntry];
-    [self.delegate stripeChart:self didSelectChartEntry:selectedEntry];
+    if ([self.delegate respondsToSelector:@selector(stripeChart:didDeselectChartEntry:)]) {
+        [self.delegate stripeChart:self didDeselectChartEntry:oldEntry];
+    }
+    if ([self.delegate respondsToSelector:@selector(stripeChart:didSelectChartEntry:)]) {
+        [self.delegate stripeChart:self didSelectChartEntry:selectedEntry];
+    }
     
     [UIView animateWithDuration:0.3 animations:^{
         [self placeStripes];
@@ -57,6 +61,17 @@
     [super layoutSubviews];
     [self recreateChartValues];
     [self placeStripes];
+}
+
+#pragma mark - Public
+
+- (UIView *)viewForEntry:(AYStripeChartEntry *)entry {
+    for (NSInteger index = 0; index < [self.stripeChartEntries count]; index++) {
+        if (entry == self.stripeChartEntries[index]) {
+            return self.stripesViews[index];
+        }
+    }
+    return nil;
 }
 
 #pragma mark - Private
@@ -75,7 +90,7 @@
         } else {
             detailsView.alpha = 1;
         }
-
+        
         
         CGFloat viewHeight = 0;
         if (self.selectedStripe) {
@@ -224,7 +239,7 @@
     for (NSInteger i = 0; i < [self.stripesViews count]; i++) {
         UIView *stripeView = self.stripesViews[i];
         if (stripeView == selectedView) {
-            if (self.delegate && ![self.delegate stripeChart:self willSelectChartEntry:self.stripeChartEntries[i]]) {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(stripeChart:willSelectChartEntry:)] && ![self.delegate stripeChart:self willSelectChartEntry:self.stripeChartEntries[i]]) {
                 return;
             }
             self.selectedEntry = self.stripeChartEntries[i];

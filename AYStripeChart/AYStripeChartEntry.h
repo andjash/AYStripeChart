@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AYStripeChartEntry : UIView
+@interface AYStripeChartEntry : NSObject
 
 @property (nonatomic, assign, readonly) CGFloat value;
 @property (nonatomic, strong, readonly) UIColor *color;

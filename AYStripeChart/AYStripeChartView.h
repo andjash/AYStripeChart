@@ -28,4 +28,6 @@
 
 @property (nonatomic, assign) id<AYStripeChartViewDelegate> delegate;
 
+- (UIView *)viewForEntry:(AYStripeChartEntry *)entry;
+
 @end
