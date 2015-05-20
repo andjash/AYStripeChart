@@ -97,7 +97,11 @@
             if (self.selectedStripe == stripeView) {
                 viewHeight = self.frame.size.height;
             } else {
-                viewHeight =  self.frame.size.height - _selectedItemHeightIncrease;
+                if (self.selectedItemHeightIncreasePercentage > 0) {
+                    viewHeight =  self.frame.size.height / _selectedItemHeightIncreasePercentage;
+                } else {
+                    viewHeight =  self.frame.size.height - _selectedItemHeightIncrease;
+                }
             }
         } else {
             viewHeight = self.frame.size.height;
